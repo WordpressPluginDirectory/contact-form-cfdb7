@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=H5F3Z6S3
 Tags: cf7, contact form 7, contact form 7 db, cf7 database, wpcf7
 Requires at least: 4.8
 Tested up to: 6.6
-Stable tag: 1.2.8
+Stable tag: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 7.0
@@ -54,6 +54,15 @@ Import data from the CSV file to the CFDB7 database
 Support : [http://www.ciphercoin.com/contact/](https://www.ciphercoin.com/contact/)
 Extensions : [Contact form 7 more Add-ons](https://ciphercoin.com/contact-form-7-database-cfdb7-add-ons/)
 
+== Frequently Asked Questions ==
+= 1. How do you change the CSV delimiter to a semicolon? =
+To change the CSV delimiter to a semicolon, add the following code to your theme's **functions.php** file:
+```
+add_filter('cfdb7_csv_delimiter', function( $delimiter ){
+    return ';';
+});
+```
+
 
 == Installation ==
 
@@ -62,10 +71,15 @@ Extensions : [Contact form 7 more Add-ons](https://ciphercoin.com/contact-form-7
 3. Done!
 
 
+
+
 == Screenshots ==
 1. Admin
 
 == Changelog ==
+
+= 1.2.9 =
+changed csv delimiter to comma with filter
 
 = 1.2.8 =
 changed csv delimiter to semicolon
@@ -82,8 +96,6 @@ Improve I18N Issues
 = 1.2.6.5 =
 Fixed csv security issues 
 
-= 1.2.6.3 =
-Fixed php 8.1 issues
 
 
 

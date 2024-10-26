@@ -46,7 +46,7 @@ class CFDB7_Export_CSV{
         $array_keys = array_keys($array);
         $heading    = array();
         $unwanted   = array('cfdb7_file', 'cfdb7_', 'your-');
-        $delimiter  = apply_filters('cfdb7_csv_delimiter', ';');
+        $delimiter  = apply_filters('cfdb7_csv_delimiter', ',');
 
         foreach ( $array_keys as $aKeys ) {
             if( $aKeys == 'form_date' ) $aKeys = 'Date';
